@@ -1,0 +1,28 @@
+<p>Registro</p>
+
+
+<h2>Dueños</h2>
+<form (ngSubmit)="onSubmit()">
+  <input [(ngModel)]="owner.nombre" name="nombre" placeholder="Nombre" required>
+  <input [(ngModel)]="owner.apellido" name="apellido" placeholder="Apellido" required>
+  <input [(ngModel)]="owner.rut" name="rut" placeholder="RUT" required>
+  <input [(ngModel)]="owner.telefono" name="telefono" placeholder="Teléfono" required>
+  <input [(ngModel)]="owner.correo" name="correo" placeholder="Correo" required>
+  <button type="submit">{{ owner.id ? 'Editar' : 'Registrar' }} Dueños</button>
+</form>
+
+<h3>Lista de Dueños</h3>
+<ul>
+  <li *ngFor="let owner of owners">
+    nombre: {{ owner.nombre }} {{ owner.apellido }}; rut: {{ owner.rut }}; teléfono: {{ owner.telefono }}; correo: {{ owner.correo }} 
+    <button (click)="editOwner(owner)">Editar</button>
+    <button (click)="deleteOwner(owner.id)">Eliminar</button>
+  </li>
+</ul>
+
+<!-- ngModel permite el intercambio de datos de forma bidireccional entre el componente y la vista
+ Lo que suceda en el componente, se verá reflejado en la vista 
+ Lo que se suceda en la vista,impactará en el componente 
+ *ngFor: itera sobre una colección de elementos (array)
+ owner: i
+ owners: array-->
