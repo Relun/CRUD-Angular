@@ -1,4 +1,11 @@
-# EntrevistaLaboral
+## Para compilar el proyecto de manera local, ingresar en la terminal los siguientes comandos:
+git clone https://github.com/Relun/CRUD-Angular.git
+## Una vez posicionado en la carpeta del proyecto:
+npm install (esto para instalar las dependencias)
+
+ng serve    (esto para ejecutar el proyecto en el navegador)
+
+# CRUD Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
 
